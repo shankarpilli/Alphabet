@@ -1,11 +1,8 @@
 package com.lkgapps.alphabet;
 
 import android.app.Activity;
-import android.graphics.Color;
 import android.os.Bundle;
 import android.widget.LinearLayout;
-
-import java.util.Random;
 
 public class MainActivity extends Activity {
 
@@ -16,8 +13,9 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         linearLayout = findViewById(R.id.ll_layout);
-        Random rnd = new Random();
-        int color = Color.argb(255, rnd.nextInt(256), rnd.nextInt(256), rnd.nextInt(256));
-        linearLayout.setBackgroundColor(color);
+
+        DrawingView mDrawingView = new DrawingView(this);
+        LinearLayout mDrawingPad = findViewById(R.id.view_drawing_pad);
+        mDrawingPad.addView(mDrawingView);
     }
 }

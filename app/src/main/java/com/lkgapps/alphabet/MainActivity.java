@@ -18,6 +18,4 @@ public class MainActivity extends Activity {
         LinearLayout mDrawingPad = findViewById(R.id.view_drawing_pad);
         mDrawingPad.addView(mDrawingView);
     }
-
-
 }

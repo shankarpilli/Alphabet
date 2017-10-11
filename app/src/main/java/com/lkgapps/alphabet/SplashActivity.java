@@ -1,7 +1,9 @@
 package com.lkgapps.alphabet;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.widget.TextView;
 
 /**
@@ -18,5 +20,16 @@ public class SplashActivity extends Activity {
 
         tv_name = findViewById(R.id.tv_name);
         tv_name.setTypeface(Utility.setTypeCAMBRIAB(this));
+
+        Handler mSplashHandler = new Handler();
+        Runnable action = new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(SplashActivity.this, DashboardActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        };
+        mSplashHandler.postDelayed(action, 2000);
     }
 }

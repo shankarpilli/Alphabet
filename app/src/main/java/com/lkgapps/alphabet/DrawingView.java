@@ -4,6 +4,7 @@ import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.DashPathEffect;
 import android.graphics.Paint;
 import android.graphics.Path;
 import android.view.MotionEvent;
@@ -30,6 +31,7 @@ public class DrawingView extends View {
         mPaint.setDither(true);
         mPaint.setColor(0xFFFF0000);
         mPaint.setStyle(Paint.Style.STROKE);
+        //mPaint.setPathEffect(new DashPathEffect(new float[] {10,20}, 0));
         mPaint.setStrokeJoin(Paint.Join.ROUND);
         mPaint.setStrokeCap(Paint.Cap.ROUND);
         mPaint.setStrokeWidth(20);
